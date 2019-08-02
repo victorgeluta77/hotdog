@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/public/style/style.css">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <header class="hotdog_header">
+                <div class="hotdog_header_dostavka">
+                    <p class="dostavka">In which city to deliver your order :</p>
+                    <select name="dostavkaCity" id="city" class="dostavkaCity">
+                        <option value="Lviv">Lviv</option>
+                        <option value="Kyiv">Kyiv</option>
+                        <option value="Odesa">Odesa</option>
+                        <option value="Kharkiv">Kharkiv</option>
+                        <option value="Rivne">Rivne</option>
+                        <option value="Vinnytsia">Vinnytsia</option>
+                    </select>
+                </div>
+                <div class="hotdog_header_contact">+380(67)791-00-85</div>
+                <div class="hotdog_header_ymovu"> terms of delivery </div>
+            </header>
+            <nav class="hotdog_nav">
+                <a href="/"><img src="/public/img/logohotdog.png" alt="hotdog"></a>
+                <ul class="hotdog_menu">
+                    <li> <a href="/">Hotdog's history</a> </li>
+                    <li> <a href="/readhotdog">All Hotdog</a> </li>
+                    <li> <a href="/createhotdog">Create HotDog</a> </li>
+                </ul>
+            </nav>
+            <main class="hotdog_main">
+                <% for(var i=0; i<id.length;i++) {%>
+                <div class="readDB">
+                    <img src='<%=url[i] %>' alt="" class="readDB_img" />
+                    <p class="readDB_name"><%=name[i].name %></p>
+                   <div class="del_up">
+                    <form action="/" method="post">
+                        <select name="hotdogVubir" id="hotdogName">
+                            <option name="Delete">Delete</option>
+                            <option name="Update">Update name</option>
+                        </select>
+                        <button type="submit" name='<%=name[i].id %>'>Vubir</button>
+                    </form>
+                </div>
+                </div>
+                <%} %> 
+            </main>
+            <footer></footer>
+            <input type="text" name="vubir" id="">
+        <script src="" async defer></script>
+    </body>
+</html>
