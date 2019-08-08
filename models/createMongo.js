@@ -1,6 +1,7 @@
 let mongoose = require('mongoose');
 let Schema = mongoose.Schema;
 let PersonSchema = new Schema({
+    img: String,
     name: String
 });
   
@@ -10,6 +11,7 @@ module.exports = async(req,res)=>{
     try {
         let keys = Object.keys(req.body);
     const person =  new Person ({
+        img: keys[0],
          name: keys[0]
     });
     await person.save(function(err){

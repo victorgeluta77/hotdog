@@ -3,6 +3,7 @@ const mongoose =require('mongoose');
 const Schema = mongoose.Schema;
 
 let HotDogSchema = new Schema({
+    img: String,
     name: String
 });
 
@@ -19,7 +20,7 @@ module.exports.dani = async (req,res)=>{
             } else{
              let url =[];
              for (let i=0; i<hatdogDani.length;i++){
-                url[i]='../public/img/'+hatdogDani[i].name+'.jpg';
+                url[i]='../public/img/'+hatdogDani[i].img +'.jpg';
              }
              console.log('url -',url);
              res.render("AllHotdogs",{id: hatdogDani,

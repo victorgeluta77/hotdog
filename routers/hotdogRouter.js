@@ -14,7 +14,7 @@ router.get('/readhotdog', (req,res)=>readMongo.dani(req,res));
 router.get('/createhotdog',(req,res)=>{
     res.sendFile(path.join(__dirname,"../public/pages/createhotdog.html"));
 })
-// cearte elment to database
+// create elment to database
 router.post('/createhotdog',(req,res)=>createMongo(req,res));
 
 
