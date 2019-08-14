@@ -41,10 +41,10 @@ module.exports.delUp=async (req,res)=>{
     console.log('41-',req.body);
     console.log('keys -',keys);
     console.log('value -',value);
-   if (keys[0]=='Delete'){
+   if (value[0]=='Delete'){
        
-       await hotdog.findByIdAndRemove(keys[1]);
-       console.log('delete key - ',keys[1])
+       await hotdog.findByIdAndRemove(keys[0]);
+       console.log('delete key - ',keys[0])
        res.redirect('/readhotdog');
    }
    if (keys[0]=='Update name'){
