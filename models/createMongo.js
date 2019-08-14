@@ -1,3 +1,4 @@
+
 let mongoose = require('mongoose');
 let Schema = mongoose.Schema;
 let PersonSchema = new Schema({
@@ -19,6 +20,7 @@ module.exports = async(req,res)=>{
           
         if(err) return console.log(err);
         console.log("Сохранен объект", person);
+
     });
     } catch (error) {
         console.log(error)

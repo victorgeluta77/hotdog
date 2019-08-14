@@ -10,6 +10,7 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="/public/style/style.css">
+        <link rel="stylesheet" href="/public/style/styleModel.css">
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -38,24 +39,31 @@
                     <li> <a href="/createhotdog">Create HotDog</a> </li>
                 </ul>
             </nav>
-            <main class="hotdog_main">
+            <main class="hotdog_main" id ="readHotDog">
                 <% for(var i=0; i<id.length;i++) {%>
-                <div class="readDB">
+                <div class="readDB" >
                     <img src='<%=url[i] %>' alt="" class="readDB_img" />
                     <p class="readDB_name"><%=name[i].name %></p>
                    <div class="del_up">
-                    <form action="/" method="post">
-                        <select name="hotdogVubir" id="hotdogName">
-                            <option name="Delete">Delete</option>
-                            <option name="Update">Update name</option>
+                    <form action="/" method="post" id ="updateHotdog">
+                        <!-- <p name="Delete" id="" value="Delete" class="deleteHotdog" >Delete</p>  -->
+                        <select name="Delete" id="" class="deleteHotdog" >
+                            <option value="Delete" name="Delete">Delete</option>
                         </select>
-                        <button type="submit" name='<%=name[i].id %>'>Vubir</button>
+                        <button type="submit" id = "btn" name='<%=name[i].id %>'>Select option</button>
+                    </form>
+                </div>
+                <div class="del_up">
+                    <form action="/" method="post" id ="updateHotdog">
+                        <!-- <p name="Delete" id="" value="Delete" class="deleteHotdog" >Delete</p>  -->
+                        <input type="text" name="Update name" id="" class="deleteHotdog" placeholder="update name">
+                        <button type="submit" id = "btn" name='<%=name[i].id %>'>Select option</button>
                     </form>
                 </div>
                 </div>
                 <%} %> 
             </main>
             <footer></footer>
-        <script src="" async defer></script>
+        <script></script>
     </body>
 </html>

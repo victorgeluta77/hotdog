@@ -10,6 +10,7 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="/public/style/style.css">
+        <link rel="stylesheet" href="/public/style/styleModel.css">
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -39,11 +40,11 @@
                 </ul>
             </nav>
             <h1>Create HotDog</h1>
-            <main class="hotdog_main">
+            <main id = "createHotdog" class="hotdog_main">
                 <form action="/createhotdog" method="post" class="forma_create">
                    <img src="/public/img/blin-dog.jpg" alt="blin-dog" class="create_hotdog_img">
                    <p> blin - dog </p>
-                   <input type="submit" value="create " class="btn" name="blin-dog">
+                   <input type="submit" value="create " id = "hotdog1"  class="btn" name="blin-dog">
                 </form>
                 <form action="/createhotdog" method="post" class="forma_create">
                     <img src="/public/img/datskie-hot-dogi.jpg"  alt="datskie-hot-dogi" class="create_hotdog_img">
@@ -68,11 +69,11 @@
                  <form action="/createhotdog" method="post" class="forma_create">
                     <img src="/public/img/hot-dog-v-lavashe.jpg"  alt="hot-dog-v-lavashe" class="create_hotdog_img">
                     <p></p> hot-dog-v-lavashe </p>
-                    <input type="submit" value="create " class="btn" name="hot-dog-v-lavashe">
+                    <input type="submit" value="create " class="btn" name="hot-dog-v-lavashe" >
                  </form>
             </main>
             
             <footer></footer>
-        <script src="" async defer></script>
+        <script src="/public/js/moduleWindow.js"></script>
     </body>
 </html>
