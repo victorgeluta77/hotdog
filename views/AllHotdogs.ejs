@@ -46,18 +46,13 @@
                     <p class="readDB_name"><%=name[i].name %></p>
                    <div class="del_up">
                     <form action="/" method="post" id ="updateHotdog">
-                        <!-- <p name="Delete" id="" value="Delete" class="deleteHotdog" >Delete</p>  -->
-                        <select name="Delete" id="" class="deleteHotdog" >
-                            <option value="Delete" name="Delete">Delete</option>
-                        </select>
-                        <button type="submit" id = "btn" name='<%=name[i].id %>'>Select option</button>
+                        <button type="submit" id = "btn" name='<%=name[i].id %>' value="Dlete" class="btnDelete">Delete</button>
                     </form>
                 </div>
                 <div class="del_up">
                     <form action="/" method="post" id ="updateHotdog">
-                        <!-- <p name="Delete" id="" value="Delete" class="deleteHotdog" >Delete</p>  -->
                         <input type="text" name="Update name" id="" class="deleteHotdog" placeholder="update name">
-                        <button type="submit" id = "btn" name='<%=name[i].id %>'>Select option</button>
+                        <button type="submit" id = "btn" name='<%=name[i].id %>'>Update</button>
                     </form>
                 </div>
                 </div>
